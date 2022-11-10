@@ -3,7 +3,9 @@ FROM debian:latest
 MAINTAINER ghijsma@it2c.be
 
 RUN apt-get update && apt-get install -y \
+    cron-apt \
     git \
+    unattended-upgrades \
     wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
